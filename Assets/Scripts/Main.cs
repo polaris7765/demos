@@ -4,7 +4,7 @@ using FairyGUI;
 using UnityEngine.UI;
 using Image = FairyGUI.Image;
 
-public class BasicsMain : MonoBehaviour
+public class Main : MonoBehaviour
 {
     private GComponent _mainView;
     private GObject _backBtn;
@@ -21,19 +21,19 @@ public class BasicsMain : MonoBehaviour
     private List<AnswerItem> _answereds;
     private List<OptionsItem> _optionsItems;
     public TextAsset jsonText;
-    public Gradient lineGradient;
     public int playId = 0;
 
     private int _clickedIndex = 0;
     private int _totalIndex = 0;
     private int _tryAnswerTimes = 0;
-    private const int CAN_ANSWER_TIME = 2;
     private int _rowCount;
     private int _colCount;
+    
     private const int ITEM_WIDTH = 236;
     private const int ITEM_HEIGHT = 236;
     private const int START_X = 300;
     private const int START_Y = -125;
+    private const int CAN_ANSWER_TIME = 2;
 
     public class AnswerItem
     {
@@ -99,7 +99,7 @@ public class BasicsMain : MonoBehaviour
         _closeBtn = _mainView.GetChild("btn_close");
         _closeBtn.onClick.Add(onClickClose);
         _refreshBtn = _mainView.GetChild("btn_refresh");
-        //_refreshBtn.onClick.Add(onClickRefresh);
+        _refreshBtn.onClick.Add(onClickRefresh);
         //get json data
         JsonHelper.Instance.Init(jsonText.text);
         QuestionsBody itemData = JsonHelper.Instance.GetQuestionsItemList[playId]?.Body;
@@ -163,7 +163,7 @@ public class BasicsMain : MonoBehaviour
             var loader = obj.GetChild("pic").asLoader;
             loader.x = 60;
             loader.y = 60;
-            Texture2D texture = Resources.Load<Texture2D>($"MazeUI/texture/{imgData?.sha1}");
+            Texture2D texture = Resources.Load<Texture2D>($"Texture/{imgData?.sha1}");
             loader.texture = new NTexture(texture);
             _itemObjects.Add(i.ToString(), obj);
             _itemStates.Add(i.ToString(), ButtonState.Disable);
@@ -518,6 +518,12 @@ public class BasicsMain : MonoBehaviour
         }
 
         return -1; //全部正确
+    }
+
+    private void onClickRefresh()
+    {
+        _tryAnswerTimes = 0;
+        GameReset();
     }
 
     private void onClickPlay()

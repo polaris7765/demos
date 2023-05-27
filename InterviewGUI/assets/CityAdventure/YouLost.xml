@@ -3,7 +3,7 @@
   <displayList>
     <graph id="n25_jdsd" name="n25" xy="0,0" size="1920,1080" type="rect" lineColor="#ffcccccc" fillColor="#ffcccccc"/>
     <image id="n26_jdsd" name="YouLost" src="pdng2x" fileName="Images/background_02_1.png" xy="566,314" pivot="0.5,0.5" size="810,337"/>
-    <text id="n27_jdsd" name="n27" xy="706,379" pivot="0.5,0.5" size="524,185" fontSize="91" color="#ff0000" align="center" vAlign="middle" autoSize="none" bold="true" text="You Lost!"/>
+    <text id="n27_jdsd" name="n27" xy="706,379" pivot="0.5,0.5" size="524,185" fontSize="91" color="#ff0000" align="center" vAlign="middle" autoSize="none" bold="true" text="Try Again!"/>
   </displayList>
   <transition name="t0" autoPlayDelay=".5">
     <item time="0" type="Scale" target="n26_jdsd" value="0,0"/>
