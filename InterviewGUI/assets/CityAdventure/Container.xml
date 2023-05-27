@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080">
+  <displayList>
+    <component id="n1_pmvs" name="groupItem" src="i2x31f" fileName="groupItem.xml" xy="4,7" visible="false"/>
+  </displayList>
+</component>

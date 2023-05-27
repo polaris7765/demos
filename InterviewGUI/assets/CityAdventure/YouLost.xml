@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080">
+  <displayList>
+    <graph id="n25_jdsd" name="n25" xy="0,0" size="1920,1080" type="rect" lineColor="#ffcccccc" fillColor="#ffcccccc"/>
+    <image id="n26_jdsd" name="YouLost" src="pdng2x" fileName="Images/background_02_1.png" xy="566,314" pivot="0.5,0.5" size="810,337"/>
+    <text id="n27_jdsd" name="n27" xy="706,379" pivot="0.5,0.5" size="524,185" fontSize="91" color="#ff0000" align="center" vAlign="middle" autoSize="none" bold="true" text="You Lost!"/>
+  </displayList>
+  <transition name="t0" autoPlayDelay=".5">
+    <item time="0" type="Scale" target="n26_jdsd" value="0,0"/>
+    <item time="0" type="Visible" target="n27_jdsd" value="false"/>
+    <item time="6" type="Scale" target="n26_jdsd" tween="true" startValue="0,0" endValue="1,1" duration="6"/>
+    <item time="11" type="Visible" target="n27_jdsd" value="true"/>
+  </transition>
+</component>

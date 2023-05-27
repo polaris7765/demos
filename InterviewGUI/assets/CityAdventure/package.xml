@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="9cnknucu">
+  <resources>
+    <component id="jx014" name="home_bak.xml" path="/" exported="true"/>
+    <component id="i2x31f" name="groupItem.xml" path="/"/>
+    <image id="pdng2s" name="refresh.png" path="/Images/"/>
+    <image id="pdng2t" name="wrong.png" path="/Images/"/>
+    <image id="pdng2u" name="back.png" path="/Images/"/>
+    <image id="pdng2v" name="background.png" path="/Images/" scale="9grid" scale9grid="45,19,1,1"/>
+    <image id="pdng2w" name="background_01_1.png" path="/Images/" scale="9grid" scale9grid="17,17,1,1"/>
+    <image id="pdng2x" name="background_02_1.png" path="/Images/" scale="9grid" scale9grid="21,17,1,0"/>
+    <image id="pdng2y" name="background_03_1.png" path="/Images/" scale="9grid" scale9grid="18,18,1,1"/>
+    <image id="pdng2z" name="circle.png" path="/Images/" scale="9grid" scale9grid="31,29,1,0"/>
+    <image id="pdng30" name="close.png" path="/Images/"/>
+    <image id="pdng31" name="help.png" path="/Images/"/>
+    <image id="pdng32" name="play.png" path="/Images/"/>
+    <image id="qhza33" name="circle_d.png" path="/Images/"/>
+    <image id="qhza34" name="circle_s.png" path="/Images/"/>
+    <component id="qhza35" name="ButtonPlay.xml" path="/"/>
+    <component id="qhza36" name="ButtonHelp.xml" path="/"/>
+    <component id="qhza37" name="ButtonClose.xml" path="/"/>
+    <component id="qhza38" name="ButtonRefresh.xml" path="/"/>
+    <image id="qhza3a" name="background_arrow.png" path="/Images/" disableTrim="true"/>
+    <image id="qhza3b" name="background_blue.png" path="/Images/" scale="9grid" scale9grid="21,17,1,0"/>
+    <component id="qhza3c" name="background_a.xml" path="/"/>
+    <component id="qhza3d" name="ButtonBack.xml" path="/"/>
+    <component id="qhza3e" name="progress.xml" path="/"/>
+    <component id="qhza3f" name="bar.xml" path="/"/>
+    <component id="qhza3g" name="Container.xml" path="/"/>
+    <component id="pmvs3h" name="YouWin.xml" path="/"/>
+    <component id="jdsd3i" name="YouLost.xml" path="/"/>
+  </resources>
+  <publish name="Maze"/>
+</packageDescription>

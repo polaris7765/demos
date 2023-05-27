@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="118,62">
+  <displayList>
+    <image id="n1_qhza" name="n1" src="pdng2z" fileName="Images/circle.png" xy="0,0" size="118,62"/>
+    <text id="n2_qhza" name="progress" xy="13,3" size="99,53" fontSize="30" align="center" vAlign="middle" autoSize="none" text="1/5"/>
+  </displayList>
+</component>

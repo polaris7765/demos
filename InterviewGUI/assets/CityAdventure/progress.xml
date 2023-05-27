@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="140,70" extention="Label">
+  <displayList>
+    <image id="n4_qhza" name="n4" src="pdng2z" fileName="Images/circle.png" xy="12,3" pivot="1,0" size="118,62"/>
+    <text id="n5_qhza" name="progress" xy="23,8" size="99,53" font="Source Han Sans CN" fontSize="30" align="center" vAlign="middle" autoSize="none" text="1/5"/>
+    <component id="n3_qhza" name="btn_back" src="qhza3d" fileName="ButtonBack.xml" xy="66,3"/>
+  </displayList>
+  <transition name="to">
+    <item time="0" type="Alpha" target="n3_qhza" value="0"/>
+    <item time="0" type="Alpha" target="n5_qhza" tween="true" startValue="1" endValue="0" duration="4"/>
+    <item time="0" type="Size" target="n4_qhza" tween="true" startValue="118,62" endValue="62,62" duration="6"/>
+    <item time="2" type="Alpha" target="n3_qhza" tween="true" startValue="0" endValue="1" duration="6"/>
+  </transition>
+  <transition name="back">
+    <item time="0" type="Alpha" target="n3_qhza" tween="true" startValue="1" endValue="0" duration="2"/>
+    <item time="0" type="Alpha" target="n4_qhza" value="0"/>
+    <item time="0" type="Alpha" target="n5_qhza" value="0"/>
+    <item time="0" type="Size" target="n4_qhza" value="118,62"/>
+    <item time="2" type="Alpha" target="n4_qhza" tween="true" startValue="0" endValue="1" duration="6"/>
+    <item time="2" type="Alpha" target="n5_qhza" tween="true" startValue="0" endValue="1" duration="6"/>
+    <item time="8" type="Alpha" target="n3_qhza" value="0"/>
+    <item time="8" type="Size" target="n4_qhza" value="118,62"/>
+  </transition>
+</component>

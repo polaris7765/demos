@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="420,420" extention="Label">
+  <displayList>
+    <image id="n10_qhza" name="background_1" src="pdng2y" fileName="Images/background_03_1.png" xy="18,18" size="380,380" color="#cccccc"/>
+    <image id="n7_qhza" name="background_2" src="pdng2w" fileName="Images/background_01_1.png" xy="18,18" size="380,380" visible="false"/>
+    <image id="n9_qhza" name="background_3" src="pdng2x" fileName="Images/background_02_1.png" xy="18,18" size="380,380" visible="false"/>
+    <component id="n12_qhza" name="background_arrow" src="qhza3c" fileName="background_a.xml" xy="18,16" size="380,440" scale="1,0.953" visible="false"/>
+    <loader id="n15_qhza" name="pic" xy="30,30" size="350,350" aspect="true"/>
+    <image id="n17_pmvs" name="wrong" src="pdng2t" fileName="Images/wrong.png" xy="364,49" pivot="0.5,0.5" anchor="true" size="90,88" aspect="true" visible="false"/>
+  </displayList>
+  <transition name="WrongDown1">
+    <item time="0" type="Pivot" target="n12_qhza" value="0.5,0.5"/>
+    <item time="0" type="Scale" target="n12_qhza" tween="true" startValue="1,0.953" endValue="1.1,1" duration="6"/>
+    <item time="0" type="XY" target="n12_qhza" value="18,9"/>
+    <item time="6" type="Scale" target="n12_qhza" tween="true" startValue="1.1,1" endValue="1,0.95" duration="6"/>
+    <item time="12" type="XY" target="n12_qhza" value="18,9"/>
+    <item time="13" type="XY" target="n12_qhza" value="28,9"/>
+    <item time="14" type="XY" target="n12_qhza" value="8,9"/>
+    <item time="15" type="XY" target="n12_qhza" value="28,9"/>
+    <item time="16" type="XY" target="n12_qhza" value="18,9"/>
+    <item time="17" type="XY" target="n12_qhza" value="28,9"/>
+    <item time="18" type="XY" target="n12_qhza" value="18,9"/>
+  </transition>
+  <transition name="WrongIcon">
+    <item time="0" type="Rotation" target="n17_pmvs" tween="true" startValue="180" endValue="0" duration="7"/>
+    <item time="0" type="Size" target="n17_pmvs" tween="true" startValue="0,0" endValue="90,88" duration="7"/>
+    <item time="0" type="Visible" target="n17_pmvs" value="true"/>
+  </transition>
+  <transition name="Left">
+    <item time="0" type="Pivot" target="n12_qhza" value="0.5,0"/>
+    <item time="0" type="Rotation" target="n12_qhza" value="90"/>
+    <item time="0" type="Scale" target="n12_qhza" value="1,0.953"/>
+    <item time="0" type="Scale" target="n12_qhza" tween="true" startValue="1,0.95" endValue="1,1.05" duration="6"/>
+    <item time="0" type="XY" target="n12_qhza" value="208,208,0.495,0.495"/>
+    <item time="0" type="XY" target="n12_qhza" value="208,208,0.495,0.495"/>
+  </transition>
+  <transition name="Right">
+    <item time="0" type="Pivot" target="n12_qhza" value="0,0.5"/>
+    <item time="0" type="Pivot" target="n12_qhza" value="0,0.5"/>
+    <item time="0" type="Pivot" target="n12_qhza" value="0.5,0"/>
+    <item time="0" type="Rotation" target="n12_qhza" value="270"/>
+    <item time="0" type="Rotation" target="n12_qhza" value="270"/>
+    <item time="0" type="Rotation" target="n12_qhza" value="270"/>
+    <item time="0" type="Scale" target="n12_qhza" tween="true" startValue="1,0.953" endValue="1,0.953" duration="0"/>
+    <item time="0" type="Scale" target="n12_qhza" tween="true" startValue="1,0.953" endValue="1,0.95" duration="0"/>
+    <item time="0" type="Scale" target="n12_qhza" tween="true" startValue="1,0.95" endValue="1,0.95" duration="0"/>
+    <item time="0" type="Scale" target="n12_qhza" tween="true" startValue="1,0.95" endValue="1,0.953" duration="0"/>
+    <item time="0" type="Scale" target="n12_qhza" tween="true" startValue="1,0.953" endValue="1,1.05" duration="6"/>
+    <item time="0" type="XY" target="n12_qhza" value="-170,208"/>
+    <item time="0" type="XY" target="n12_qhza" value="-170,208"/>
+    <item time="0" type="XY" target="n12_qhza" value="-170,208"/>
+    <item time="0" type="XY" target="n12_qhza" value="-170,208"/>
+    <item time="0" type="XY" target="n12_qhza" value="-170,208"/>
+  </transition>
+  <transition name="Up">
+    <item time="0" type="Pivot" target="n12_qhza" value="0,0"/>
+    <item time="0" type="Pivot" target="n12_qhza" value="0.5,0"/>
+    <item time="0" type="Rotation" target="n12_qhza" value="180"/>
+    <item time="0" type="Rotation" target="n12_qhza" value="180"/>
+    <item time="0" type="Scale" target="n12_qhza" value="1,0.953"/>
+    <item time="0" type="Scale" target="n12_qhza" value="1,0.953"/>
+    <item time="0" type="Scale" target="n12_qhza" tween="true" startValue="1,0.95" endValue="1,1.05" duration="6"/>
+    <item time="0" type="XY" target="n12_qhza" value="18,398"/>
+    <item time="0" type="XY" target="n12_qhza" value="18,398"/>
+    <item time="0" type="XY" target="n12_qhza" value="18,398"/>
+  </transition>
+  <transition name="Down">
+    <item time="0" type="Pivot" target="n12_qhza" value="0,0"/>
+    <item time="0" type="Pivot" target="n12_qhza" value="0.5,0"/>
+    <item time="0" type="Rotation" target="n12_qhza" value="0"/>
+    <item time="0" type="Rotation" target="n12_qhza" value="0"/>
+    <item time="0" type="Scale" target="n12_qhza" value="1,0.953"/>
+    <item time="0" type="Scale" target="n12_qhza" value="1,0.953"/>
+    <item time="0" type="Scale" target="n12_qhza" tween="true" startValue="1,0.95" endValue="1,1.05" duration="6"/>
+    <item time="0" type="XY" target="n12_qhza" value="18,18,0.043,0.043"/>
+    <item time="0" type="XY" target="n12_qhza" value="18,18,0.043,0.043"/>
+    <item time="0" type="XY" target="n12_qhza" value="18,18,0.043,0.043"/>
+  </transition>
+  <transition name="Clicked">
+    <item time="0" type="Pivot" target="n9_qhza" value="0.5,0.5"/>
+    <item time="0" type="Scale" target="n9_qhza" tween="true" startValue="1,1" endValue="1.06,1.06" duration="3"/>
+    <item time="3" type="Scale" target="n9_qhza" tween="true" startValue="1.06,1.06" endValue="1,1" duration="3"/>
+  </transition>
+  <transition name="WrongLeft1">
+    <item time="0" type="Pivot" target="n12_qhza" value="0.5,0.5"/>
+    <item time="0" type="Rotation" target="n12_qhza" value="90"/>
+    <item time="0" type="Scale" target="n12_qhza" tween="true" startValue="1,0.953" endValue="1.1,1" duration="6"/>
+    <item time="0" type="XY" target="n12_qhza" value="-3,-12"/>
+    <item time="6" type="Scale" target="n12_qhza" tween="true" startValue="1.1,1" endValue="1,0.95" duration="6"/>
+    <item time="12" type="XY" target="n12_qhza" value="-3,-12,-0.007,-0.029"/>
+    <item time="13" type="XY" target="n12_qhza" value="-13,-12"/>
+    <item time="14" type="XY" target="n12_qhza" value="7,-12"/>
+    <item time="15" type="XY" target="n12_qhza" value="-13,-12"/>
+    <item time="16" type="XY" target="n12_qhza" value="7,-12"/>
+    <item time="17" type="XY" target="n12_qhza" value="-13,-12"/>
+    <item time="18" type="XY" target="n12_qhza" value="-3,-12"/>
+  </transition>
+  <transition name="WrongRight1">
+    <item time="0" type="Pivot" target="n12_qhza" value="0.5,0.5"/>
+    <item time="0" type="Rotation" target="n12_qhza" value="270"/>
+    <item time="0" type="Scale" target="n12_qhza" tween="true" startValue="1,0.953" endValue="1.1,1" duration="6"/>
+    <item time="0" type="XY" target="n12_qhza" value="38,-12"/>
+    <item time="6" type="Scale" target="n12_qhza" tween="true" startValue="1.1,1" endValue="1,0.95" duration="6"/>
+    <item time="12" type="XY" target="n12_qhza" value="38,-12"/>
+    <item time="13" type="XY" target="n12_qhza" value="28,-12"/>
+    <item time="14" type="XY" target="n12_qhza" value="48,-12"/>
+    <item time="15" type="XY" target="n12_qhza" value="28,-12"/>
+    <item time="16" type="XY" target="n12_qhza" value="48,-12"/>
+    <item time="17" type="XY" target="n12_qhza" value="28,-12"/>
+    <item time="18" type="XY" target="n12_qhza" value="38,-12"/>
+  </transition>
+  <transition name="WrongUp1">
+    <item time="0" type="Pivot" target="n12_qhza" value="0.5,0.5"/>
+    <item time="0" type="Rotation" target="n12_qhza" value="180"/>
+    <item time="0" type="Scale" target="n12_qhza" tween="true" startValue="1,0.953" endValue="1.1,1" duration="6"/>
+    <item time="0" type="XY" target="n12_qhza" value="18,-32"/>
+    <item time="6" type="Scale" target="n12_qhza" tween="true" startValue="1.1,1" endValue="1,0.95" duration="6"/>
+    <item time="12" type="XY" target="n12_qhza" value="18,-32"/>
+    <item time="13" type="XY" target="n12_qhza" value="28,-32"/>
+    <item time="14" type="XY" target="n12_qhza" value="8,-32"/>
+    <item time="15" type="XY" target="n12_qhza" value="28,-32"/>
+    <item time="16" type="XY" target="n12_qhza" value="18,-32"/>
+    <item time="17" type="XY" target="n12_qhza" value="28,-32"/>
+    <item time="18" type="XY" target="n12_qhza" value="18,-32"/>
+  </transition>
+  <transition name="WrongLeft">
+    <item time="0" type="Pivot" target="n12_qhza" value="0.5,0"/>
+    <item time="0" type="Pivot" target="n12_qhza" value="0.5,0"/>
+    <item time="0" type="Rotation" target="n12_qhza" value="90"/>
+    <item time="0" type="Rotation" target="n12_qhza" value="90"/>
+    <item time="0" type="Scale" target="n12_qhza" value="1,1.04"/>
+    <item time="0" type="Scale" target="n12_qhza" value="1,1.04"/>
+    <item time="0" type="Scale" target="n12_qhza" value="1,1.04"/>
+    <item time="0" type="Scale" target="n12_qhza" tween="true" startValue="1,1.04" endValue="1.1,1.14" duration="7"/>
+    <item time="0" type="XY" target="n12_qhza" value="208,208"/>
+    <item time="0" type="XY" target="n12_qhza" value="208,208"/>
+    <item time="0" type="XY" target="n12_qhza" tween="true" startValue="208,208" endValue="230,208" duration="7"/>
+    <item time="7" type="Scale" target="n12_qhza" tween="true" startValue="1.1,1.14" endValue="1,1.04" duration="6"/>
+    <item time="7" type="XY" target="n12_qhza" tween="true" startValue="230,208" endValue="208,208" duration="6"/>
+    <item time="13" type="XY" target="n12_qhza" value="208,208"/>
+    <item time="13" type="XY" target="n12_qhza" value="208,208"/>
+    <item time="13" type="XY" target="n12_qhza" value="208,208"/>
+    <item time="13" type="XY" target="n12_qhza" value="208,208"/>
+    <item time="14" type="XY" target="n12_qhza" value="208,198"/>
+    <item time="15" type="XY" target="n12_qhza" value="208,218"/>
+    <item time="16" type="XY" target="n12_qhza" value="208,198"/>
+    <item time="17" type="XY" target="n12_qhza" value="208,218"/>
+    <item time="18" type="XY" target="n12_qhza" value="208,198"/>
+    <item time="19" type="XY" target="n12_qhza" value="208,208"/>
+  </transition>
+  <transition name="WrongRight">
+    <item time="0" type="Pivot" target="n12_qhza" value="0,0.5"/>
+    <item time="0" type="Pivot" target="n12_qhza" value="0,0.5"/>
+    <item time="0" type="Pivot" target="n12_qhza" value="0.5,0"/>
+    <item time="0" type="Rotation" target="n12_qhza" value="270"/>
+    <item time="0" type="Rotation" target="n12_qhza" value="270"/>
+    <item time="0" type="Rotation" target="n12_qhza" value="270"/>
+    <item time="0" type="Scale" target="n12_qhza" tween="true" startValue="1,1.04" endValue="1,1.04" duration="0"/>
+    <item time="0" type="Scale" target="n12_qhza" tween="true" startValue="1,1.04" endValue="1,1.04" duration="0"/>
+    <item time="0" type="Scale" target="n12_qhza" tween="true" startValue="1,1.04" endValue="1,1.04" duration="0"/>
+    <item time="0" type="Scale" target="n12_qhza" tween="true" startValue="1,1.04" endValue="1,1.04" duration="0"/>
+    <item time="0" type="Scale" target="n12_qhza" tween="true" startValue="1,1.04" endValue="1,1.04" duration="1"/>
+    <item time="0" type="XY" target="n12_qhza" value="-170,208"/>
+    <item time="0" type="XY" target="n12_qhza" value="-170,208"/>
+    <item time="0" type="XY" target="n12_qhza" value="-170,208"/>
+    <item time="0" type="XY" target="n12_qhza" value="-170,208"/>
+    <item time="0" type="XY" target="n12_qhza" value="-170,208"/>
+    <item time="1" type="Scale" target="n12_qhza" tween="true" startValue="1,1.04" endValue="1.1,1.14" duration="6"/>
+    <item time="1" type="XY" target="n12_qhza" tween="true" startValue="-170,208" endValue="-190,208" duration="6"/>
+    <item time="7" type="Scale" target="n12_qhza" tween="true" startValue="1.1,1.14" endValue="1,1.04" duration="6"/>
+    <item time="7" type="XY" target="n12_qhza" tween="true" startValue="-190,208" endValue="-170,208" duration="6"/>
+    <item time="13" type="XY" target="n12_qhza" value="-170,208"/>
+    <item time="13" type="XY" target="n12_qhza" value="-170,208"/>
+    <item time="13" type="XY" target="n12_qhza" value="-170,208"/>
+    <item time="14" type="XY" target="n12_qhza" value="-170,198"/>
+    <item time="15" type="XY" target="n12_qhza" value="-170,218"/>
+    <item time="16" type="XY" target="n12_qhza" value="-170,198"/>
+    <item time="17" type="XY" target="n12_qhza" value="-170,218"/>
+    <item time="18" type="XY" target="n12_qhza" value="-170,198"/>
+    <item time="19" type="XY" target="n12_qhza" value="-170,208"/>
+  </transition>
+  <transition name="WrongDown">
+    <item time="0" type="Pivot" target="n12_qhza" value="0,0"/>
+    <item time="0" type="Pivot" target="n12_qhza" value="0.5,0"/>
+    <item time="0" type="Rotation" target="n12_qhza" value="0"/>
+    <item time="0" type="Rotation" target="n12_qhza" value="0"/>
+    <item time="0" type="Scale" target="n12_qhza" value="1,1.04"/>
+    <item time="0" type="Scale" target="n12_qhza" value="1,1.04"/>
+    <item time="0" type="Scale" target="n12_qhza" value="1,1.04"/>
+    <item time="0" type="XY" target="n12_qhza" value="18,18"/>
+    <item time="0" type="XY" target="n12_qhza" value="18,18"/>
+    <item time="0" type="XY" target="n12_qhza" value="18,18"/>
+    <item time="1" type="Scale" target="n12_qhza" tween="true" startValue="1,1.04" endValue="1.1,1.14" duration="6"/>
+    <item time="1" type="XY" target="n12_qhza" tween="true" startValue="18,18" endValue="18,0" duration="6"/>
+    <item time="7" type="Scale" target="n12_qhza" tween="true" startValue="1.1,1.14" endValue="1,1.04" duration="6"/>
+    <item time="7" type="XY" target="n12_qhza" tween="true" startValue="18,0" endValue="18,18" duration="6"/>
+    <item time="13" type="XY" target="n12_qhza" value="18,18"/>
+    <item time="13" type="XY" target="n12_qhza" value="18,18"/>
+    <item time="14" type="XY" target="n12_qhza" value="8,18"/>
+    <item time="15" type="XY" target="n12_qhza" value="28,18"/>
+    <item time="16" type="XY" target="n12_qhza" value="8,18"/>
+    <item time="17" type="XY" target="n12_qhza" value="28,18"/>
+    <item time="18" type="XY" target="n12_qhza" value="8,18"/>
+    <item time="19" type="XY" target="n12_qhza" value="18,18"/>
+  </transition>
+  <transition name="WrongUp">
+    <item time="0" type="Pivot" target="n12_qhza" value="0,0.42"/>
+    <item time="0" type="Pivot" target="n12_qhza" value="0.5,0.42"/>
+    <item time="0" type="Rotation" target="n12_qhza" value="180"/>
+    <item time="0" type="Rotation" target="n12_qhza" value="180"/>
+    <item time="0" type="Scale" target="n12_qhza" value="1,1.04"/>
+    <item time="0" type="Scale" target="n12_qhza" value="1,1.04"/>
+    <item time="0" type="Scale" target="n12_qhza" value="1,1.04"/>
+    <item time="0" type="XY" target="n12_qhza" value="18,18"/>
+    <item time="0" type="XY" target="n12_qhza" value="18,18"/>
+    <item time="0" type="XY" target="n12_qhza" value="18,18"/>
+    <item time="1" type="Scale" target="n12_qhza" tween="true" startValue="1,1.04" endValue="1.1,1.14" duration="6"/>
+    <item time="1" type="XY" target="n12_qhza" tween="true" startValue="18,18" endValue="18,24" duration="6"/>
+    <item time="7" type="Scale" target="n12_qhza" tween="true" startValue="1.1,1.14" endValue="1,1.04" duration="6"/>
+    <item time="7" type="XY" target="n12_qhza" tween="true" startValue="18,24" endValue="18,18" duration="6"/>
+    <item time="13" type="XY" target="n12_qhza" value="18,18"/>
+    <item time="14" type="XY" target="n12_qhza" value="8,18"/>
+    <item time="15" type="XY" target="n12_qhza" value="28,18"/>
+    <item time="16" type="XY" target="n12_qhza" value="8,18"/>
+    <item time="17" type="XY" target="n12_qhza" value="28,18"/>
+    <item time="18" type="XY" target="n12_qhza" value="8,18"/>
+    <item time="19" type="XY" target="n12_qhza" value="18,18"/>
+  </transition>
+</component>
