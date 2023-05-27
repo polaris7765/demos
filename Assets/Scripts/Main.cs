@@ -359,6 +359,7 @@ namespace HighFlyers
         /// <returns></returns>
         private int CheckAnswerCorrect()
         {
+            if (_answereds.Count < _correctAnswers.Count) return -2;//not answer
             for (int i = 0; i < _answereds.Count; i++)
             {
                 if (_answereds[i].index != _correctAnswers[i])
@@ -455,12 +456,14 @@ namespace HighFlyers
         {
             _answereds.Clear();
             _clickedIndex = 0;
+            _clickedEnable = true;
             _isCanBackStep = true;
             ResetAllItemSate(true);
             //init items by answer
             InitCanClickItems(_correctAnswers[0]);
             //init progress
             SetProgress(0);
+            _backBtn.visible = false;
             _progressBar.GetTransition("back").Play();
         }
 
@@ -469,7 +472,7 @@ namespace HighFlyers
         /// </summary>
         private void OnClickProgressBar()
         {
-            if (_clickedIndex == _correctAnswers.Count)
+            if (_clickedIndex == _correctAnswers.Count && !_backBtn.visible)
             {
                 _isCanBackStep = false;
                 Invoke(nameof(ShowBackButton), 0.5f);
@@ -490,20 +493,29 @@ namespace HighFlyers
             _backBtn.visible = true;
         }
 
+        private bool _clickedEnable = true;
         /// <summary>
         /// button clicked event
         /// </summary>
         private void OnClickBack()
         {
             if (IsGameOver()) return;
+            if (!_clickedEnable) return;
             int index = CheckAnswerCorrect();
+            if (index == -2)
+            {
+                Debug.Log("Not Finished!");
+                return;
+            }
             if (index == -1)
             {
                 Debug.Log("ALL CORRECT!");
+                _clickedEnable = false;
                 ShowYouWin();
             }
             else
             {
+                _clickedEnable = false;
                 _tryAnswerTimes++;
                 ItemManager obj = GetItemByIndex(_answereds[index].index);
                 if (IsGameOver())
