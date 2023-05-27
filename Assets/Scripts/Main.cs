@@ -538,7 +538,7 @@ namespace HighFlyers
 
         private void OnClickRefresh()
         {
-            _tryAnswerTimes = 0;
+            //_tryAnswerTimes = 0;
             GameReset();
         }
 
