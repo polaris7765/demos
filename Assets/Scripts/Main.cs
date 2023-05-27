@@ -25,6 +25,9 @@ namespace HighFlyers
         private List<Common.AnswerItem> _answereds;
         private List<OptionsItem> _optionsItems;
 
+        // button back can be click?
+        private bool _clickedEnable = true;
+        //can back to prev step?
         private bool _isCanBackStep = true;
         private int _clickedIndex = 0;
         private int _totalIndex = 0;
@@ -493,7 +496,6 @@ namespace HighFlyers
             _backBtn.visible = true;
         }
 
-        private bool _clickedEnable = true;
         /// <summary>
         /// button clicked event
         /// </summary>
