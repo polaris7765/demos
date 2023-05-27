@@ -1,8 +1,9 @@
 using System;
 using FairyGUI;
+using HighFlyers.Utility;
 using UnityEngine;
 
-namespace HighFlyers
+namespace HighFlyers.Core
 {
     public class ItemManager : MonoBehaviour
     {
@@ -13,6 +14,15 @@ namespace HighFlyers
         public int id { get; set; }
         public Common.ButtonState buttonState { get; set; }
 
+        /// <summary>
+        /// init item and load item picture
+        /// </summary>
+        /// <param name="index"></param>
+        /// <param name="obj"></param>
+        /// <param name="imgName"></param>
+        /// <param name="row"></param>
+        /// <param name="col"></param>
+        /// <param name="callback"></param>
         public void Init(int index, GObject obj, string imgName, int row, int col, Action<ItemManager> callback)
         {
             id = index;
@@ -36,6 +46,12 @@ namespace HighFlyers
             _gObject.onClick.Add(OnClickedItem);
         }
 
+        /// <summary>
+        /// set item state
+        /// </summary>
+        /// <param name="state"></param>
+        /// <param name="resetArrow"></param>
+        /// <param name="resetWrongIcon"></param>
         public void SetButtonState(Common.ButtonState state, bool resetArrow = false, bool resetWrongIcon = false)
         {
             if (_gObject == null) return;
@@ -55,8 +71,15 @@ namespace HighFlyers
             buttonState = state;
         }
 
+        /// <summary>
+        /// get item GUI object
+        /// </summary>
         public GObject GetObject => _gObject;
 
+        /// <summary>
+        /// clicked item callback
+        /// </summary>
+        /// <param name="context"></param>
         private void OnClickedItem(EventContext context)
         {
             _callback?.Invoke(this);

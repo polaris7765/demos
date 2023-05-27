@@ -1,4 +1,4 @@
-namespace HighFlyers
+namespace HighFlyers.Utility
 {
     public class Common
     {
@@ -8,6 +8,9 @@ namespace HighFlyers
         public const int START_Y = -125;
         public const int CAN_ANSWER_TIME = 2;
         
+        /// <summary>
+        /// answer object.
+        /// </summary>
         public class AnswerItem
         {
             public int row;
@@ -15,6 +18,10 @@ namespace HighFlyers
             public int index;
             public Common.ArrowState dir;
         }
+        
+        /// <summary>
+        ///button states 
+        /// </summary>
         public enum ButtonState
         {
             Disable,
@@ -22,6 +29,9 @@ namespace HighFlyers
             Down
         }
 
+        /// <summary>
+        /// item background animation state.
+        /// </summary>
         public enum ArrowState
         {
             None,
