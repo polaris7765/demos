@@ -7,7 +7,11 @@ namespace HighFlyers.Utility
         public const int START_X = 300;
         public const int START_Y = -125;
         public const int CAN_ANSWER_TIME = 2;
+
+        public const int ALL_ANSWER_CORRECT = -1;
+        public const int NOT_ANSWERED = -2;
         
+        public const int ANSWER_NOT_IN_LIST = -1;
         /// <summary>
         /// answer object.
         /// </summary>

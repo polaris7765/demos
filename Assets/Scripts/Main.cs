@@ -145,7 +145,7 @@ namespace HighFlyers
             if (_answereds.Count > 0)
             {
                 int aIndex = IsInAnswerList(item.id);
-                if (aIndex != -1)
+                if (aIndex != Common.ANSWER_NOT_IN_LIST)
                 {
                     if (aIndex == _answereds.Count - 1)
                         return;
@@ -188,7 +188,7 @@ namespace HighFlyers
             {
                 Common.AnswerItem aItem = _answereds[_answereds.Count - 1];
                 ItemManager obj = SetItemState(aItem.row, aItem.col, true);
-                Common.ArrowState dir = GetArrowDirection(_answereds[_answereds.Count - 1], answerItem);
+                Common.ArrowState dir = GetArrowDirection(aItem, answerItem);
                 _answereds[_answereds.Count - 1].dir = dir;
                 //play item background dir animation
                 SetItemAnimation(obj, dir);
@@ -353,7 +353,7 @@ namespace HighFlyers
                     return i;
             }
 
-            return -1;
+            return Common.ANSWER_NOT_IN_LIST;
         }
 
         /// <summary>
@@ -362,7 +362,7 @@ namespace HighFlyers
         /// <returns></returns>
         private int CheckAnswerCorrect()
         {
-            if (_answereds.Count < _correctAnswers.Count) return -2;//not answer
+            if (_answereds.Count < _correctAnswers.Count) return Common.NOT_ANSWERED;//not answer
             for (int i = 0; i < _answereds.Count; i++)
             {
                 if (_answereds[i].index != _correctAnswers[i])
@@ -371,7 +371,7 @@ namespace HighFlyers
                 }
             }
 
-            return -1; //all correct
+            return Common.ALL_ANSWER_CORRECT; //all correct
         }
 
         private void ShowYouWin()
@@ -414,7 +414,8 @@ namespace HighFlyers
                 var answerItem = _answereds[i];
                 ItemManager obj = GetItemByIndex(answerItem.index);
                 _demoContainer.SetChildIndex(obj.GetObject, answerItem.index);
-                SetItemAnimation(obj, Common.ArrowState.WrongIcon);
+                if(answerItem.index != _correctAnswers[i])
+                    SetItemAnimation(obj, Common.ArrowState.WrongIcon);
                 obj.SetButtonState(Common.ButtonState.Free, true);
             }
         }
@@ -498,18 +499,19 @@ namespace HighFlyers
 
         /// <summary>
         /// button clicked event
+        /// some parameters can be public value, that is easy for tuning.
         /// </summary>
         private void OnClickBack()
         {
             if (IsGameOver()) return;
             if (!_clickedEnable) return;
             int index = CheckAnswerCorrect();
-            if (index == -2)
+            if (index == Common.NOT_ANSWERED)
             {
                 Debug.Log("Not Finished!");
                 return;
             }
-            if (index == -1)
+            if (index == Common.ALL_ANSWER_CORRECT)
             {
                 Debug.Log("ALL CORRECT!");
                 _clickedEnable = false;
@@ -524,8 +526,8 @@ namespace HighFlyers
                 {
                     Debug.Log("You are lost this round!");
                     ShowWrongItemWhenLost();
-                    Invoke(nameof(DisplayCorrectAnswer), 3f);
-                    Invoke(nameof(ShowYouLost), 6f);
+                    Invoke(nameof(DisplayCorrectAnswer), 2f);
+                    Invoke(nameof(ShowYouLost), 4f);
                 }
                 else
                 {
